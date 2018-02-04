@@ -20,4 +20,4 @@ clustering
 
 Regression
 Linear Regression
-h(x) = ax + b -> find a, b -> minimize sum (h(x) - y)^2
+h(x) = ax + b -> find a, b -> minimize sum (h(x) - y)^2d
