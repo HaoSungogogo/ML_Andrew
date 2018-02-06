@@ -20,3 +20,22 @@ def gradientDescent(X, y, theta, alpha, numOfIterations):
         plt.show()
     return theta
 
+# def logisticDerivative(X, y, theta):
+#     num = len(y)
+#     numOfFeatures = len(theta)
+#     z = np.dot(theta, X)
+#     h = sigmoid(z)
+#     derivative = np.empty(numOfFeatures)
+#     for idx in range(numOfFeatures):
+#         derivative[idx] = sum((h - y) * X[idx][:]) / num
+#     return derivative
+
+def logisticDerivative(theta,X,y):
+    m = len(y)
+    features = len(theta)
+    derive = np.empty(features)
+    z = np.dot(theta,X)
+    h = sigmoid(z)
+    for jj in range(features):
+        derive[jj] = sum((h-y)*X[jj,:])/m
+    return derive
